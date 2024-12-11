@@ -8,5 +8,14 @@ export async function POST(request: Request) {
   await connectMongoDB();
 
   await Idea.create({ title, description });
-  return NextResponse.json({ message: "New Idea Created", data },{status:201});
+  return NextResponse.json(
+    { message: "New Idea Created", data },
+    { status: 201 }
+  );
+}
+
+export async function GET (){
+    await connectMongoDB();
+    const idea = await Idea.find();
+    return NextResponse.json({idea});
 }
