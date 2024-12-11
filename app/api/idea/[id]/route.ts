@@ -15,3 +15,14 @@ export async function PUT(
 
   return NextResponse.json({message:"Topic updated"},{status:200});
 }
+
+export async function GET(request:NextRequest,{params}:{params:{id:string}}){
+
+    const {id} = params;
+    await connectMongoDB();
+    const idea = await Idea.findOne({_id:id});
+
+    return NextResponse.json({idea},{status:200})
+
+
+}
