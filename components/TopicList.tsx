@@ -19,6 +19,7 @@ const getIdea = async () => {
 };
 
 export default async function TopicList() {
+    
   const { ideas } = await getIdea();
 
   return (
