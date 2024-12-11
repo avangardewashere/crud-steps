@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const topicSchema = new Schema(
+const IdeaSchema = new Schema(
   {
     title: String,
     description: String,
@@ -10,6 +10,6 @@ const topicSchema = new Schema(
   }
 );
 
-const Topic = mongoose.models.Topic || mongoose.model("Topic", topicSchema);
+const Idea = mongoose.models.Idea || mongoose.model("Idea", IdeaSchema);
 
-export default Topic;
+export default Idea;
