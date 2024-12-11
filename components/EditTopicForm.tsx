@@ -3,13 +3,13 @@ export default function EditTopicForm() {
       <form className="flex flex-col gap-3">
         <input
           type="text"
-          placeholder="Idea Title"
+          placeholder="Update Idea Title"
           className="border border-slate-500 px-6 py-2"
         />
   
         <input
           type="text"
-          placeholder="Idea Description"
+          placeholder="Update Idea Description"
           className="border border-slate-500 px-6 py-2"
         />
   
